@@ -27,8 +27,17 @@ h3 {
 	.h3();
 }
 
+a {
+	color: @bodyColor;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 .header-main {
 	.make-row();
+	padding-top: 20px;
+	padding-bottom: 20px;
 	@media (min-width: @screen-sm-min) {
 		padding-top: 70px;
 		padding-bottom: 50px;
@@ -40,8 +49,9 @@ h3 {
 	.font-size(4);
 	.line-height(4);
 	text-transform: uppercase;
+	.make-xs-column(12; @gutter: 50px);
 	@media (min-width: @screen-sm-min) {
-		.make-sm-column(8);
+		.make-sm-column(7);
 	}
 	em {
 		padding-left: 5px;
@@ -52,23 +62,25 @@ h3 {
 		opacity: 0.5;
 		.font-size(2);
 		vertical-align: baseline;
-		padding-left: 20px;
 		display: block;
-		@media (min-width: @screen-sm-min) {
+		@media (min-width: @screen-md-min) {
+			padding-left: 20px;
 			display: inline;
 		}
 	}
 }
 
 .nav-main {
+	.make-xs-column(12; @gutter: 50px);
 	@media (min-width: @screen-sm-min) {
-		.make-sm-column(4);
+		.make-sm-column(5);
 	}
 }
 
 .nav-main_list {	
 	list-style: none;
 	margin: 0;
+	padding: 0;
 	li {
 		display: inline-block;
 		&:first-child {
@@ -82,6 +94,9 @@ h3 {
 		text-transform: uppercase;
 		color: @bodyColor;
 		font-family: 'brandon_textblack';
+		&:hover {
+			color: @brandAction;
+		}
 	}
 	@media (min-width: @screen-sm-min) {
 		.pull-right();
@@ -97,6 +112,9 @@ h3 {
 	background: -ms-linear-gradient(45deg,  @brandPrimary 0%,@brandPrimary 50%,@brandPrimaryOffset 50%,@brandPrimaryOffset 100%); /* IE10+ */
 	background: linear-gradient(45deg,  @brandPrimary 0%,@brandPrimary 50%,@brandPrimaryOffset 50%,@brandPrimaryOffset 100%); /* W3C */
 	.clearfix();
+	a {
+		border-bottom: 1px solid;
+	}
 }
 
 .panel-intro_header {
@@ -142,8 +160,9 @@ h3 {
 }
 
 .panel-mission_header {
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: inline-block;
 	border-bottom: 1px solid rgb(173, 178, 177);
 }
 
@@ -157,6 +176,7 @@ h3 {
 
 .events-list {
 	.make-row();
+	clear: both;
 	@media (min-width: @screen-sm-min) {
 		margin-bottom: 50px;
 	}
@@ -178,6 +198,9 @@ h3 {
 	background-color: @brandSecondary;
 	padding: 10px;
 	color: rgb(255, 255, 255);
+	&:hover {
+		background-color: darken(@brandSecondary, 5%);
+	}
 }
 
 .event-title {
@@ -187,6 +210,10 @@ h3 {
 .event-desc {
 	padding: 30px 30px 50px 30px;
 	background: @highlight;
+}
+
+.event-meta span {
+	display: block;
 }
 
 // Get involved
@@ -227,6 +254,7 @@ h3 {
 	&:hover {
 		text-decoration: none;
 		color: rgb(255, 255, 255);
+		background-color: darken(@brandAction, 5%);
 	}
 }
 
