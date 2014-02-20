@@ -53,7 +53,6 @@ h3 {
 }
 
 .panel-intro {
-	padding-top: 60px;
 	text-align: center;
 	background-color: @brandPrimary;
 	background: -moz-linear-gradient(45deg,  @brandPrimary 0%, @brandPrimary 50%, @brandPrimaryOffset 50%, @brandPrimaryOffset 100%); /* FF3.6+ */
@@ -61,14 +60,14 @@ h3 {
 	background: -o-linear-gradient(45deg,  @brandPrimary 0%,@brandPrimary 50%,@brandPrimaryOffset 50%,@brandPrimaryOffset 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(45deg,  @brandPrimary 0%,@brandPrimary 50%,@brandPrimaryOffset 50%,@brandPrimaryOffset 100%); /* IE10+ */
 	background: linear-gradient(45deg,  @brandPrimary 0%,@brandPrimary 50%,@brandPrimaryOffset 50%,@brandPrimaryOffset 100%); /* W3C */
-
 	.clearfix();
 }
 
 .panel-intro_header {
-	.line-height(7);
 	margin-top: 30px;
 	margin-bottom: 30px;
+	text-transform: uppercase;
+	.make-xs-column(12; @gutter: 50px);
 	@media (min-width: @screen-sm-min) {
 		margin-top: 175px;
 		margin-bottom: 100px;
@@ -79,6 +78,7 @@ h3 {
 
 .panel-intro_text {
 	.h2();
+	.make-xs-column(12; @gutter: 50px);
 	@media (min-width: @screen-sm-min) {
 		.make-sm-column(8);
 		.make-sm-column-offset(2);
@@ -89,9 +89,12 @@ h3 {
 	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 30px;
+	.make-xs-column(12; @gutter: 50px);
 	@media (min-width: @screen-sm-min) {	
 		padding-top: 60px;
 		padding-bottom: 115px;
+		.make-sm-column(8);
+		.make-sm-column-offset(2);
 	}
 }
 
@@ -111,14 +114,17 @@ h3 {
 
 .events-list {
 	.make-row();
-	margin-bottom: 100px;
+	@media (min-width: @screen-sm-min) {
+		margin-bottom: 50px;
+	}
 }
 
 .event-detail {
+	margin-bottom: 50px;
 	text-align: center;
-	@media (min-width: @screen-sm-min) {
-		.make-sm-column(4);
-	}
+	@media (min-width: @screen-md-min) {
+		.make-md-column(4);
+	}	
 }
 
 .event-detail>a:first-child {
@@ -155,16 +161,14 @@ h3 {
 }
 
 .panel-involved_header {
-	@media (min-width: @screen-sm-min) {
-		.make-sm-column(8);
-		.make-sm-column-offset(2);
-	}	
+	
 }
 
 .panel-involved_text {
 	.h3();
-	.line-height(4.2);
-	@media (min-width: @screen-sm-min) {
+	.line-height(4.2);	
+	.make-xs-column(12; @gutter: 50px);
+	@media (min-width: @screen-sm-min) {	
 		.make-sm-column(8);
 		.make-sm-column-offset(2);
 	}	
