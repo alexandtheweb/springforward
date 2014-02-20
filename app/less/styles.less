@@ -1,13 +1,16 @@
 // SpringForward
 
 @import url("../bower_components/bootstrap/less/bootstrap.less");
+@import url("fonts.less");
 @import url("variables.less");
+
 
 body {
 	.font-size(1.8);
 	.line-height(2.2);
 	background-color: @bodyBg;
 	color: @bodyColor;
+	font-family: 'brandon_text_regularregular';
 }
 
 h1 {
@@ -17,38 +20,71 @@ h1 {
 h2 {
 	.h2();
 	text-transform: uppercase;	
+	font-family: 'brandon_textblack';
 }
 
 h3 {
-	.h3();	
+	.h3();
 }
 
 .header-main {
 	.make-row();
+	@media (min-width: @screen-sm-min) {
+		padding-top: 70px;
+		padding-bottom: 50px;
+	}
 }
 
 .header-main_logo {
+	font-family: 'brandon_textmedium';
+	.font-size(4);
+	.line-height(4);
+	text-transform: uppercase;
 	@media (min-width: @screen-sm-min) {
-		.make-sm-column(6);
-	}	
+		.make-sm-column(8);
+	}
+	em {
+		padding-left: 5px;
+		font-family: 'brandon_textblack_italic';
+	}
+	.header-main_date {
+		font-style: italic;
+		opacity: 0.5;
+		.font-size(2);
+		vertical-align: baseline;
+		padding-left: 20px;
+		display: block;
+		@media (min-width: @screen-sm-min) {
+			display: inline;
+		}
+	}
 }
 
 .nav-main {
-		@media (min-width: @screen-sm-min) {
-		.make-sm-column(6);
+	@media (min-width: @screen-sm-min) {
+		.make-sm-column(4);
 	}
 }
 
 .nav-main_list {	
 	list-style: none;
-	.pull-right();
+	margin: 0;
 	li {
 		display: inline-block;
+		&:first-child {
+			margin-right: 60px;
+		}
 	}
 	a {
 		font-weight: bold;
+		.line-height(4);
+		display: block;
 		text-transform: uppercase;
 		color: @bodyColor;
+		font-family: 'brandon_textblack';
+	}
+	@media (min-width: @screen-sm-min) {
+		.pull-right();
 	}
 }
 
@@ -64,6 +100,7 @@ h3 {
 }
 
 .panel-intro_header {
+	font-family: 'brandon_textmedium';
 	margin-top: 30px;
 	margin-bottom: 30px;
 	text-transform: uppercase;
@@ -74,14 +111,19 @@ h3 {
 		.make-sm-column(8);
 		.make-sm-column-offset(2);
 	}	
+	strong {
+		font-family: 'brandon_textblack_italic';
+	}
 }
 
 .panel-intro_text {
 	.h2();
 	.make-xs-column(12; @gutter: 50px);
+	margin-top: 0;
+	margin-bottom: 100px;
 	@media (min-width: @screen-sm-min) {
-		.make-sm-column(8);
-		.make-sm-column-offset(2);
+		.make-sm-column(10);
+		.make-sm-column-offset(1);
 	}	
 }
 
@@ -93,8 +135,9 @@ h3 {
 	@media (min-width: @screen-sm-min) {	
 		padding-top: 60px;
 		padding-bottom: 115px;
-		.make-sm-column(8);
-		.make-sm-column-offset(2);
+		.make-sm-column(10);
+		.make-sm-column-offset(1);
+		.line-height(3.2);
 	}
 }
 
