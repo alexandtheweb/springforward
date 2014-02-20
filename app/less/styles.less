@@ -1,0 +1,186 @@
+// SpringForward
+
+@import url("../bower_components/bootstrap/less/bootstrap.less");
+@import url("variables.less");
+
+body {
+	.font-size(1.8);
+	.line-height(2.2);
+	background-color: @bodyBg;
+	color: @bodyColor;
+}
+
+h1 {
+	.h1();
+} 
+
+h2 {
+	.h2();
+	text-transform: uppercase;	
+}
+
+h3 {
+	.h3();	
+}
+
+.header-main {
+	.make-row();
+}
+
+.header-main_logo {
+	@media (min-width: @screen-sm-min) {
+		.make-sm-column(6);
+	}	
+}
+
+.nav-main {
+		@media (min-width: @screen-sm-min) {
+		.make-sm-column(6);
+	}
+}
+
+.nav-main_list {	
+	list-style: none;
+	.pull-right();
+	li {
+		display: inline-block;
+	}
+	a {
+		font-weight: bold;
+		text-transform: uppercase;
+		color: @bodyColor;
+	}
+}
+
+.panel-intro {
+	padding-top: 60px;
+	text-align: center;
+	background-color: @brandPrimary;
+	background: -moz-linear-gradient(45deg,  @brandPrimary 0%, @brandPrimary 50%, @brandPrimaryOffset 50%, @brandPrimaryOffset 100%); /* FF3.6+ */
+	background: -webkit-linear-gradient(45deg,  @brandPrimary 0%,@brandPrimary 50%,@brandPrimaryOffset 50%,@brandPrimaryOffset 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  @brandPrimary 0%,@brandPrimary 50%,@brandPrimaryOffset 50%,@brandPrimaryOffset 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  @brandPrimary 0%,@brandPrimary 50%,@brandPrimaryOffset 50%,@brandPrimaryOffset 100%); /* IE10+ */
+	background: linear-gradient(45deg,  @brandPrimary 0%,@brandPrimary 50%,@brandPrimaryOffset 50%,@brandPrimaryOffset 100%); /* W3C */
+
+	.clearfix();
+}
+
+.panel-intro_header {
+	.line-height(7);
+	margin-top: 30px;
+	margin-bottom: 30px;
+	@media (min-width: @screen-sm-min) {
+		margin-top: 175px;
+		margin-bottom: 100px;
+		.make-sm-column(8);
+		.make-sm-column-offset(2);
+	}	
+}
+
+.panel-intro_text {
+	.h2();
+	@media (min-width: @screen-sm-min) {
+		.make-sm-column(8);
+		.make-sm-column-offset(2);
+	}	
+}
+
+.panel-mission {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	@media (min-width: @screen-sm-min) {	
+		padding-top: 60px;
+		padding-bottom: 115px;
+	}
+}
+
+.panel-mission_header {
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom: 1px solid rgb(173, 178, 177);
+}
+
+.panel-mission_text {
+	.h3();
+	margin: 0;
+
+}
+
+// Events
+
+.events-list {
+	.make-row();
+	margin-bottom: 100px;
+}
+
+.event-detail {
+	text-align: center;
+	@media (min-width: @screen-sm-min) {
+		.make-sm-column(4);
+	}
+}
+
+.event-detail>a:first-child {
+	display: block;
+}
+
+.event-header {
+	background-color: @brandSecondary;
+	padding: 10px;
+	color: rgb(255, 255, 255);
+}
+
+.event-title {
+	.h2();	
+}
+
+.event-desc {
+	padding: 30px 30px 50px 30px;
+	background: @highlight;
+}
+
+// Get involved
+
+.panel-involved {
+	.clearfix();
+	background-color: @highlight;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	@media (min-width: @screen-sm-min) {	
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}	
+}
+
+.panel-involved_header {
+	@media (min-width: @screen-sm-min) {
+		.make-sm-column(8);
+		.make-sm-column-offset(2);
+	}	
+}
+
+.panel-involved_text {
+	.h3();
+	.line-height(4.2);
+	@media (min-width: @screen-sm-min) {
+		.make-sm-column(8);
+		.make-sm-column-offset(2);
+	}	
+}
+
+.btn {
+	text-align: center;
+	display: inline-block;
+	color: rgb(255, 255, 255);
+	padding: 10px 20px;
+	text-transform: uppercase;
+	background-color: @brandAction;
+	&:hover {
+		text-decoration: none;
+		color: rgb(255, 255, 255);
+	}
+}
+
+
