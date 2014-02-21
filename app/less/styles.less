@@ -35,9 +35,8 @@ a {
 }
 
 .header-main {
-	.make-row(@gutter: 0;);
+	.make-row();
 	padding-top: 20px;
-	padding-bottom: 20px;
 	@media (min-width: @screen-sm-min) {
 		padding-top: 70px;
 		padding-bottom: 32px;
@@ -49,11 +48,13 @@ a {
 	.font-size(3);
 	.line-height(3);
 	text-transform: uppercase;
+	margin-bottom: 15px;
 	.make-xs-column(12; @gutter: 50px);
 	@media (min-width: @screen-sm-min) {
 		.font-size(4);
 		.line-height(4);
 		.make-sm-column(7);
+		margin-bottom: 0;
 	}
 	em {
 		padding-left: 5px;
@@ -150,8 +151,9 @@ a {
 	.h2();
 	.make-xs-column(12; @gutter: 50px);
 	margin-top: 0;
-	margin-bottom: 100px;
+	margin-bottom: 60px;
 	@media (min-width: @screen-sm-min) {
+	margin-bottom: 100px;
 		.make-sm-column(10);
 		.make-sm-column-offset(1);
 	}	
@@ -192,15 +194,16 @@ a {
 .events-list {
 	.make-row();
 	clear: both;
+	margin-bottom: 30px;
 	@media (min-width: @screen-sm-min) {
 		margin-bottom: 50px;
 	}
 }
 
 .event-detail {
-	margin-bottom: 50px;
 	text-align: center;
 	@media (min-width: @screen-md-min) {
+		margin-bottom: 50px;
 		.make-md-column(4);
 	}	
 }
