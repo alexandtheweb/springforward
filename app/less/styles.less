@@ -35,12 +35,12 @@ a {
 }
 
 .header-main {
-	.make-row();
+	.make-row(@gutter: 0;);
 	padding-top: 20px;
 	padding-bottom: 20px;
 	@media (min-width: @screen-sm-min) {
 		padding-top: 70px;
-		padding-bottom: 50px;
+		padding-bottom: 32px;
 	}
 }
 
@@ -65,7 +65,7 @@ a {
 		.font-size(2);
 		vertical-align: baseline;
 		display: block;
-		@media (min-width: @screen-md-min) {
+		@media (min-width: @screen-lg-min) {
 			padding-left: 20px;
 			display: inline;
 		}
@@ -85,18 +85,20 @@ a {
 	padding: 0;
 	li {
 		display: inline-block;
+		margin-right: 35px;
 		&:first-child {
 			margin-right: 20px;
 		}
 		@media (min-width: @screen-sm-min) {
+			margin-right: 65px;
 			&:first-child {
-				margin-right: 60px;
+				margin-right: 50px;
 			}
 		}
 	}
 	a {
 		font-weight: bold;
-		.line-height(4);
+		.line-height(3.5);
 		display: block;
 		text-transform: uppercase;
 		color: @bodyColor;
@@ -135,7 +137,7 @@ a {
 	.make-xs-column(12; @gutter: 50px);
 	@media (min-width: @screen-sm-min) {
 		margin-top: 175px;
-		margin-bottom: 100px;
+		margin-bottom: 93px;
 		.make-sm-column(8);
 		.make-sm-column-offset(2);
 	}	
@@ -161,7 +163,7 @@ a {
 	padding-bottom: 30px;
 	.make-xs-column(12; @gutter: 50px);
 	@media (min-width: @screen-sm-min) {	
-		padding-top: 60px;
+		padding-top: 50px;
 		padding-bottom: 115px;
 		.make-sm-column(10);
 		.make-sm-column-offset(1);
@@ -173,6 +175,9 @@ a {
 	padding-left: 20px;
 	padding-right: 20px;
 	display: inline-block;
+	.line-height(5.7);
+	margin-top: 0;
+	margin-bottom: 20px;
 	border-bottom: 1px solid rgb(173, 178, 177);
 }
 
@@ -206,7 +211,7 @@ a {
 
 .event-header {
 	background-color: @brandSecondary;
-	padding: 10px;
+	padding: 15px 0 25px;
 	color: rgb(255, 255, 255);
 	&:hover {
 		background-color: darken(@brandSecondary, 5%);
@@ -218,8 +223,11 @@ a {
 }
 
 .event-desc {
-	padding: 30px 30px 50px 30px;
+	padding: 15px;
 	background: @highlight;
+	@media (min-width: @screen-sm-min) {	
+		padding: 20px 30px 75px 30px;
+	}
 }
 
 .event-meta span {
@@ -265,7 +273,7 @@ a {
 	text-align: center;
 	display: inline-block;
 	color: rgb(255, 255, 255);
-	padding: 10px 20px;
+	padding: 16px 30px;
 	text-transform: uppercase;
 	background-color: @brandAction;
 	&:hover {
