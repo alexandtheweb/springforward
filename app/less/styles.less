@@ -88,7 +88,7 @@ a {
 		display: inline-block;
 		margin-right: 35px;
 		&:first-child {
-			margin-right: 20px;
+			margin-right: 13px;
 		}
 		@media (min-width: @screen-sm-min) {
 			margin-right: 65px;
@@ -223,12 +223,14 @@ a {
 
 .event-title {
 	.h2();	
+	text-transform: uppercase;
 }
 
 .event-desc {
 	padding: 15px;
 	background: @highlight;
 	@media (min-width: @screen-sm-min) {	
+		min-height: 275px;
 		padding: 20px 30px 75px 30px;
 	}
 }
