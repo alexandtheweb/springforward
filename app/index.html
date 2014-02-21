@@ -37,7 +37,7 @@
                 </div>
                 <nav class="nav-main">
                     <ul class="nav-main_list">
-                        <li><a href="#events">Events</a></li>
+                        <li><a href="#eventList">Events</a></li>
                         <li><a href="#getInvolved">Get involved</a></li>
                     </ul>
                 </nav>
@@ -56,7 +56,7 @@
         </section>
 
 
-        <nav role="navigation" class="events-list">
+        <nav role="navigation" id="eventList" class="events-list">
             <div class="container">
                 <article class="event-detail" itemscope itemtype="TODO">
                     <a href="https://www.eventbrite.co.uk/e/ladies-that-ux-brighton-takeaway-tickets-10538592213" itemprop="https://www.eventbrite.co.uk/e/ladies-that-ux-brighton-takeaway-tickets-10538592213" target="_blank">
@@ -112,11 +112,25 @@
             </div>                      
         </nav>
 
-        <section class="panel-involved">
+        <section class="panel-involved" id="getInvolved">
             <h2 class="panel-involved_header">Get involved!</h2>
             <p class="panel-involved_text">Are you planning an event that's in line with the Spring Forward ethos and would like to be part of our programme for 2015? Or maybe you'd like to be a Spring Forward volunteer? <a href="mailto:info@wespringforward.com">Get in touch</a>.</p>
         </section>
 
     </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+    $('document').ready(function(){
+        $(".nav-main_list a").click(function() {
+            var $this = $(this),
+                    target = $this.attr('href');
+
+            $('html, body').animate({
+                scrollTop: $(target).offset().top
+            }, 1000);
+            return false;
+        });        
+    })
+    </script>    
 </body>
 </html>

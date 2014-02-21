@@ -46,11 +46,13 @@ a {
 
 .header-main_logo {
 	font-family: 'brandon_textmedium';
-	.font-size(4);
-	.line-height(4);
+	.font-size(3);
+	.line-height(3);
 	text-transform: uppercase;
 	.make-xs-column(12; @gutter: 50px);
 	@media (min-width: @screen-sm-min) {
+		.font-size(4);
+		.line-height(4);
 		.make-sm-column(7);
 	}
 	em {
@@ -84,7 +86,12 @@ a {
 	li {
 		display: inline-block;
 		&:first-child {
-			margin-right: 60px;
+			margin-right: 20px;
+		}
+		@media (min-width: @screen-sm-min) {
+			&:first-child {
+				margin-right: 60px;
+			}
 		}
 	}
 	a {
@@ -114,6 +121,9 @@ a {
 	.clearfix();
 	a {
 		border-bottom: 1px solid;
+		&:hover {
+			color: lighten(@bodyColor, 10%);
+		}
 	}
 }
 
@@ -236,12 +246,19 @@ a {
 
 .panel-involved_text {
 	.h3();
-	.line-height(4.2);	
+	.line-height(3);	
 	.make-xs-column(12; @gutter: 50px);
 	@media (min-width: @screen-sm-min) {	
+		.line-height(4.2);	
 		.make-sm-column(8);
 		.make-sm-column-offset(2);
 	}	
+	a {
+	border-bottom: 1px solid;
+	&:hover {
+		color: lighten(@bodyColor, 10%);
+	}
+}
 }
 
 .btn {
