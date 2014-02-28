@@ -6,6 +6,7 @@
   
 //Mixins 
 
+
 .header-shaded() {
 	background-color: black;
 	color: white;
@@ -65,7 +66,6 @@ a {
 }
 
 .header-main {
-	.make-row();
 	padding-top: 20px;
 	@media (min-width: @screen-sm-min) {
 		padding-top: 30px;
@@ -82,7 +82,7 @@ a {
 	.line-height(3);
 	text-transform: uppercase;
 	margin-bottom: 15px;
-	.make-xs-column(12; @gutter: 50px);
+	.make-xs-column(12; @gutter: 0px);
 	@media (min-width: @screen-sm-min) {
 		.font-size(4);
 		.line-height(5);
@@ -107,7 +107,7 @@ a {
 }
 
 .nav-main {
-	.make-xs-column(12; @gutter: 50px);
+	.make-xs-column(12; @gutter: 0px);
 	@media (min-width: @screen-sm-min) {
 		.make-sm-column(7);
 	}
@@ -251,6 +251,7 @@ a {
 	padding: 15px;
 	background: @highlight;
 	.font-size(1.6);
+	.line-height(1.8);
 	@media (min-width: @screen-md-min) {	
 		min-height: 215px;
 		margin-top: -5px;
@@ -266,6 +267,7 @@ a {
 	position: relative;
 	z-index: 2;
 	.font-size(1.6);
+	.line-height(1.8);
 	@media (min-width: @screen-sm-min) {	
 		.font-size(2);
 		.line-height(2.2);
@@ -391,10 +393,10 @@ a {
 .footer-main {
 	.font-size(1.2);
 	.line-height(1.4);
-	text-align: right;
 	font-weight: 700;
 	background: url(../img/bg-footer.png) no-repeat 70% bottom;
 	@media (min-width: @screen-sm-min) {	
+		text-align: right;
 		margin-top: -50px;
 	}	
 	.footer-main_inner {
