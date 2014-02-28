@@ -1,10 +1,11 @@
-@bodyBg: rgb(248, 251, 248);
+@bodyBg: rgb(245, 245, 245);
 @bodyColor: rgb(40, 40, 40);
-@highlight: rgb(229,237,218);
-@brandPrimary: rgb(94, 221, 150);
+@highlight: rgb(255, 255, 255);
+@brandPrimary: rgb(0, 198, 245);
 @brandPrimaryOffset: rgb(102, 215, 138);
-@brandSecondary: rgb(1, 202, 225);
-@brandAction: rgb(233, 0, 198);
+@brandSecondary: rgb(255, 169, 1);
+@brandTertiary: rgb(203, 2, 79);
+@brandAction: rgb(0, 195, 195);
 
 
 .font-size(@sizeValue) {
@@ -23,26 +24,26 @@
 
 .h1() {
 	.font-size(3);
-	.line-height(3.8);
+	.line-height(4.4);
 	@media (min-width: @screen-sm-min) {
 		.font-size(5.2);
-		.line-height(7);
+		.line-height(6);
 	}
 }
 
 .h2() {
-	.font-size(2.6);
-	.line-height(3.2);
+	.font-size(3.6);
+	.line-height(4);
 	@media (min-width: @screen-sm-min) {
-		.font-size(3.2);
-		.line-height(4);
+		.font-size(4.4);
+		.line-height(4.8);
 	}	
 }
 
 .h3() {
-	.font-size(2);
+	.font-size(2.4);
 	@media (min-width: @screen-sm-min) {
-		.font-size(2.6);
+		.font-size(3);
 	}	
 }
 
