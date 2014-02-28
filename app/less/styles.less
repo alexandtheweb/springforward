@@ -6,7 +6,6 @@
   
 //Mixins 
 
-
 .header-shaded() {
 	background-color: black;
 	color: white;
@@ -141,6 +140,9 @@ a {
 
 .panel-intro {
 	background: url(../img/bg-body.png) no-repeat center top;
+	@media (min-width: @screen-sm-min) {
+		min-height: 490px;
+	}	
 	.clearfix();
 	a {
 		border-bottom: 1px solid;
@@ -183,14 +185,15 @@ a {
 }
 
 .panel-mission {
+	.make-row(@gutter: 0px;);
 	padding-top: 20px;
 	padding-bottom: 30px;
-	.make-xs-column(12; @gutter: 50px);
-	@media (min-width: @screen-sm-min) {	
-		padding-top: 45px;
+	.make-xs-column(12; @gutter: 0px);
+	@media (min-width: @screen-sm-min) {
+		margin-top: -20px;	
+		padding-top: 0px;
 		padding-bottom: 115px;
 		.make-sm-column(10);
-		.make-sm-column-offset(1);
 		.line-height(3.2);
 	}
 }
@@ -364,6 +367,7 @@ a {
 
 .panel-involved {
 	.clearfix();
+	.make-row(@gutter: 0px;);
 	padding-top: 0;
 	padding-bottom: 30px;
 	@media (min-width: @screen-sm-min) {	
@@ -372,12 +376,14 @@ a {
 }
 
 .panel-involved_header {
-	.header-shaded();
-	margin-bottom: 0;
-	display: inline-block;
 	@media (min-width: @screen-sm-min) {	
 		.make-sm-column(12);
 	}	
+	h2 {
+		.header-shaded();
+		margin-bottom: 0;
+		display: inline-block;
+	}
 }
 
 .panel-involved_text {
