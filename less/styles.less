@@ -85,7 +85,7 @@ a {
 	@media (min-width: @screen-sm-min) {
 		.font-size(4);
 		.line-height(5);
-		.make-sm-column(5);
+		.make-sm-column(6);
 		margin-bottom: 0;
 		background-position: 150px 5px;
 		background-size: 38px;
@@ -98,7 +98,10 @@ a {
 	.header-main_date {
 		.font-size(2);
 		vertical-align: baseline;
+		display: block;
+		margin-top: 0.5em;
 		@media (min-width: @screen-lg-min) {
+			margin-top: 0;
 			padding-left: 8px;
 			display: inline-block;
 		}
@@ -108,7 +111,7 @@ a {
 .nav-main {
 	.make-xs-column(12; @gutter: 0px);
 	@media (min-width: @screen-sm-min) {
-		.make-sm-column(7);
+		.make-sm-column(6);
 	}
 }
 
