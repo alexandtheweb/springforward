@@ -64,6 +64,47 @@ a {
 	}
 }
 
+// Icons
+
+@font-face {
+	  font-family: 'LigatureSymbols';
+	  src: url('../font/LigatureSymbols-2.11.eot');
+	  src: url('../font/LigatureSymbols-2.11.eot?#iefix') format('embedded-opentype'),
+	       url('../font/LigatureSymbols-2.11.woff') format('woff'),
+	       url('../font/LigatureSymbols-2.11.ttf') format('truetype'),
+	       url('../font/LigatureSymbols-2.11.svg#LigatureSymbols') format('svg');
+	  src: url('../font/LigatureSymbols-2.11.ttf') format('truetype');
+	  font-weight: normal;
+	  font-style: normal;
+}
+
+i.lsf-icon {
+	font-style: normal;
+}
+
+.lsf,
+.lsf-icon:before {
+	font-family: 'LigatureSymbols';
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+.lsf-icon:before {
+	content:attr(title);
+	margin-right:0.3em;
+	font-size:130%;
+}
+
+// Header and nav
+
 .header-main {
 	padding-top: 20px;
 	@media (min-width: @screen-sm-min) {
@@ -123,14 +164,20 @@ a {
 		display: inline-block;
 		margin-right: 20px;
 		@media (min-width: @screen-sm-min) {
-			margin-right: 45px;
+			margin-right: 25px;
 		}
 	}
-	a {
+	.page-anchor {
 		.line-height(3.5);
 		display: block;
 		text-transform: uppercase;
 		font-family: "Oswald", sans-serif;
+		&:hover {
+			color: darken(@brandAction, 5%);
+		}
+	}
+	.social-media {
+		font-size: 33px;
 		&:hover {
 			color: darken(@brandAction, 5%);
 		}
@@ -212,8 +259,15 @@ a {
 // Events
 
 .events-list {
-	.make-row(@gutter: 0px;);
-	clear: both;
+    clear: both;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
 	@media (min-width: @screen-md-min) {
 		margin-bottom: 30px;
 	}	
@@ -224,10 +278,9 @@ a {
 	background-color: rgb(255,255,255);
 	margin-bottom: 20px;
 	@media (min-width: @screen-md-min) {
-		.make-md-column(4; @gutter: 0px);
+		width: 32%;
 	}	
 }
-
 
 .event-detail>a:first-child {
 	display: block;
@@ -259,7 +312,7 @@ a {
 	.font-size(1.6);
 	.line-height(1.8);
 	@media (min-width: @screen-md-min) {	
-		min-height: 245px;
+		min-height: 400px;
 		padding: 5px 25px 30px 25px;
 		.font-size(2);
 		.line-height(2.4);
@@ -288,12 +341,14 @@ a {
 	.event-header {
 		position: relative;
 		@media (min-width: @screen-md-min) {	
+			min-height: 150px;
 			&:before {
 				position: absolute;
 				content: "";
 				top: 0;
 				left: 0;
-				width: 320px;
+				display: block;
+				width: 100%;
 				height: 250px;
 				background-image: url(../img/bg-events.png);
 				background-repeat: no-repeat;
