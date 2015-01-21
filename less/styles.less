@@ -1,8 +1,8 @@
 // SpringForward
 
-@import url("../bower_components/bootstrap/less/bootstrap.less");
-@import url("overrides.less");
-@import url("variables.less");
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@import "overrides.less";
+@import "variables.less";
   
 //Mixins 
 
@@ -31,11 +31,15 @@
 // Elements
 
 body {
-	.font-size(2.4);
-	.line-height(3);
+	.font-size(2);
+	.line-height(2.6);
 	background-color: @bodyBg;
 	color: @bodyColor;
 	font-family: 'Droid Sans', sans-serif;
+	@media (min-width: @screen-sm-min) {
+		.font-size(2.4);
+		.line-height(3);
+	}
 }
 
 h1 {
@@ -162,7 +166,7 @@ i.lsf-icon {
 	padding: 0;
 	li {
 		display: inline-block;
-		margin-right: 20px;
+		margin-right: 15px;
 		@media (min-width: @screen-sm-min) {
 			margin-right: 25px;
 		}
