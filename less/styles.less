@@ -1,10 +1,12 @@
 // SpringForward
 
-@import "../bower_components/bootstrap/less/bootstrap.less";
-@import "overrides.less";
-@import "variables.less";
-  
-//Mixins 
+@import url("../bower_components/bootstrap/less/bootstrap.less");
+@import url("../bower_components/bootstrap/less/forms.less");
+@import url("overrides.less");
+@import url("variables.less");
+
+//Mixins
+
 
 .header-shaded() {
 	background-color: black;
@@ -46,11 +48,11 @@ h1 {
 	.h1();
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400px;
-} 
+}
 
 h2 {
 	.h2();
-	text-transform: uppercase;	
+	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 300;
 }
@@ -160,7 +162,7 @@ i.lsf-icon {
 	}
 }
 
-.nav-main_list {	
+.nav-main_list {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -195,7 +197,7 @@ i.lsf-icon {
 	background: url(../img/bg-body.png) no-repeat center top;
 	@media (min-width: @screen-sm-min) {
 		min-height: 490px;
-	}	
+	}
 	.clearfix();
 	a {
 		border-bottom: 1px solid;
@@ -215,7 +217,7 @@ i.lsf-icon {
 		margin-top: 50px;
 		margin-bottom: 25px;
 		.make-sm-column(8);
-	}	
+	}
 	strong {
 		font-family: 'brandon_textblack_italic';
 	}
@@ -233,7 +235,7 @@ i.lsf-icon {
 	@media (min-width: @screen-sm-min) {
 		margin-bottom: 100px;
 		.make-sm-column(9);
-	}	
+	}
 }
 
 .panel-mission {
@@ -242,7 +244,7 @@ i.lsf-icon {
 	padding-bottom: 30px;
 	.make-xs-column(12; @gutter: 0px);
 	@media (min-width: @screen-sm-min) {
-		margin-top: -20px;	
+		margin-top: -20px;
 		padding-top: 0px;
 		padding-bottom: 75px;
 		.make-sm-column(10);
@@ -274,7 +276,7 @@ i.lsf-icon {
     justify-content: space-between;
 	@media (min-width: @screen-md-min) {
 		margin-bottom: 30px;
-	}	
+	}
 }
 
 .event-detail {
@@ -283,7 +285,7 @@ i.lsf-icon {
 	margin-bottom: 20px;
 	@media (min-width: @screen-md-min) {
 		width: 32%;
-	}	
+	}
 }
 
 .event-detail>a:first-child {
@@ -300,7 +302,7 @@ i.lsf-icon {
 }
 
 .event-title {
-	.h3();	
+	.h3();
 	.line-height(4);
 	font-weight: 300;
 	text-transform: uppercase;
@@ -315,7 +317,7 @@ i.lsf-icon {
 	min-height: 145px;
 	.font-size(1.6);
 	.line-height(1.8);
-	@media (min-width: @screen-md-min) {	
+	@media (min-width: @screen-md-min) {
 		min-height: 400px;
 		padding: 5px 25px 30px 25px;
 		.font-size(2);
@@ -330,10 +332,10 @@ i.lsf-icon {
 	z-index: 2;
 	.font-size(1.6);
 	.line-height(1.8);
-	@media (min-width: @screen-sm-min) {	
+	@media (min-width: @screen-sm-min) {
 		.font-size(2);
 		.line-height(2.4);
-	}		
+	}
 	span {
 		display: block;
 	}
@@ -344,7 +346,7 @@ i.lsf-icon {
 .event-detail {
 	.event-header {
 		position: relative;
-		@media (min-width: @screen-md-min) {	
+		@media (min-width: @screen-md-min) {
 			min-height: 150px;
 			&:before {
 				position: absolute;
@@ -357,7 +359,7 @@ i.lsf-icon {
 				background-image: url(../img/bg-events.png);
 				background-repeat: no-repeat;
 			}
-		}	
+		}
 	}
 	.btn {
 		span {
@@ -366,18 +368,18 @@ i.lsf-icon {
 			vertical-align: top;
 			line-height: 0.9;
 		}
-		@media (min-width: @screen-sm-min) {	
+		@media (min-width: @screen-sm-min) {
 			position: absolute;
 			bottom: 15px;
 			left: 25px;
-		}	
+		}
 	}
 }
 
 .event-detail.event-1  {
 	.event-header {
 		background-color: @brandPrimary;
-		@media (min-width: @screen-md-min) {	
+		@media (min-width: @screen-md-min) {
 			background-color: white;
 			&:before {
 				background-position: 0 0;
@@ -392,13 +394,13 @@ i.lsf-icon {
 .event-detail.event-2  {
 	.event-header {
 		background-color: @brandSecondary;
-		@media (min-width: @screen-md-min) {	
+		@media (min-width: @screen-md-min) {
 			background-color: white;
 			&:before {
 				background-position: -320px 0;
 			}
 		}
-	}	
+	}
 	.btn {
 		.btn(@brandSecondary);
 	}
@@ -407,13 +409,13 @@ i.lsf-icon {
 .event-detail.event-3  {
 	.event-header {
 		background-color: @brandTertiary;
-		@media (min-width: @screen-md-min) {	
+		@media (min-width: @screen-md-min) {
 			background-color: white;
 			&:before {
 				background-position: -640px 0;
 			}
-		}		
-	}	
+		}
+	}
 	.btn {
 		.btn(@brandTertiary);
 	}
@@ -426,15 +428,15 @@ i.lsf-icon {
 	.make-row(@gutter: 0px;);
 	padding-top: 0;
 	padding-bottom: 30px;
-	@media (min-width: @screen-sm-min) {	
+	@media (min-width: @screen-sm-min) {
 		padding-bottom: 70px;
-	}		
+	}
 }
 
 .panel-involved_header {
-	@media (min-width: @screen-sm-min) {	
+	@media (min-width: @screen-sm-min) {
 		.make-sm-column(12);
-	}	
+	}
 	h2 {
 		.header-shaded();
 		margin-bottom: 0;
@@ -442,10 +444,10 @@ i.lsf-icon {
 	}
 }
 
-.panel-involved_text {	
-	@media (min-width: @screen-md-min) {	
+.panel-involved_text {
+	@media (min-width: @screen-md-min) {
 		.make-md-column(9);
-	}	
+	}
 	a {
 		border-bottom: 1px solid;
 		&:hover {
@@ -455,15 +457,24 @@ i.lsf-icon {
 }
 
 
+
+
 .footer-main {
 	.font-size(1.2);
 	.line-height(1.4);
 	font-weight: 700;
 	background: url(../img/bg-footer.png) no-repeat 70% bottom;
-	@media (min-width: @screen-sm-min) {	
+	@media (min-width: @screen-sm-min) {
 		text-align: right;
 		margin-top: -50px;
-	}	
+	}
+	.panel-signupform {
+		.make-row(@gutter: 0px;);
+		padding-top: 20px;
+		padding-bottom: 30px;
+		//.make-xs-column(12; @gutter: 0px);
+		text-align: left;
+	}
 	.footer-main_inner {
 		padding-top: 50px;
 		padding-bottom: 10px;
@@ -474,5 +485,16 @@ i.lsf-icon {
 	}
 }
 
+// mailchimp
 
+#mc_embed_signup{
+	background: none;
+	clear: left;
+	font: 14px Helvetica,Arial,sans-serif;
+	margin-bottom: 20px;
+	.btn {
+		.btn(@brandAction);
+		border: 1px solid @brandAction;
+	}
+}
 
