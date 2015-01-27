@@ -6,12 +6,13 @@
   
 //Mixins 
 
-.header-shaded() {
-	background-color: black;
+.header-shaded(@color) {
+	background-color: @color;
 	color: white;
 	padding: 10px;
 	font-weight: 300;
 }
+
 
 .btn(@color) {
 	text-align: center;
@@ -156,7 +157,7 @@ i.lsf-icon {
 .nav-main {
 	.make-xs-column(12; @gutter: 0px);
 	@media (min-width: @screen-sm-min) {
-		.make-sm-column(6);
+		.make-sm-column(6; @gutter: 0px);
 	}
 }
 
@@ -166,9 +167,11 @@ i.lsf-icon {
 	padding: 0;
 	li {
 		display: inline-block;
-		margin-right: 10px;
+		margin-right: 5px;
+		font-size: 1.5rem;
 		@media (min-width: @screen-sm-min) {
-			margin-right: 25px;
+			margin-right: 15px;
+			font-size: inherit;
 		}
 	}
 	.page-anchor {
@@ -181,10 +184,13 @@ i.lsf-icon {
 		}
 	}
 	.social-media {
-		font-size: 33px;
+		font-size: 22px;
 		&:hover {
 			color: darken(@brandAction, 5%);
 		}
+		@media (min-width: @screen-sm-min) {
+			font-size: 33px;
+		}		
 	}
 	@media (min-width: @screen-sm-min) {
 		.pull-right();
@@ -206,7 +212,7 @@ i.lsf-icon {
 }
 
 .panel-intro_header {
-	.header-shaded();
+	.header-shaded(black);
 	margin-top: 30px;
 	margin-bottom: 30px;
 	text-transform: uppercase;
@@ -425,22 +431,28 @@ i.lsf-icon {
 	.clearfix();
 	.make-row(@gutter: 0px;);
 	padding-top: 0;
-	padding-bottom: 30px;
-	@media (min-width: @screen-sm-min) {	
-		padding-bottom: 70px;
-	}		
+	padding-bottom: 30px;	
 }
 
 .panel-involved_header {
 	@media (min-width: @screen-sm-min) {	
-		.make-sm-column(12);
+		.make-sm-column(12;@gutter: 0px;);
 	}	
 	h2 {
-		.header-shaded();
+		.header-shaded(black);
 		margin-bottom: 0;
 		display: inline-block;
 	}
 }
+
+.panel-sponsor_header {
+	h2 {
+		.header-shaded(@brandAction);
+		margin-bottom: 0;
+		display: inline-block;
+	}
+}
+
 
 .panel-involved_text {	
 	@media (min-width: @screen-md-min) {	
@@ -454,6 +466,46 @@ i.lsf-icon {
 	}
 }
 
+// Sponsors 
+
+.sponsors {
+    clear: both;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;	
+    margin-bottom: 2em;
+	@media (min-width: @screen-sm-min) {	
+		margin-bottom: 70px;
+	}    	
+}
+
+.gold-sponsors, .silver-sponsors, .venue-sponsors {	
+	@media (min-width: @screen-sm-min) {	
+		width: 30%;
+	} 	
+	img {
+		max-width: 100%;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.silver-sponsors {
+	li {
+		margin: 0 0 1.5em;
+	}
+}
+
+
+// Footer
 
 .footer-main {
 	.font-size(1.2);
