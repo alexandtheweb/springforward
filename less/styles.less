@@ -266,36 +266,52 @@ i.lsf-icon {
 	margin: 0;
 }
 
-.panel-signupform {
+.panel-involve {
 	h2 {
 		.header-shaded(rgb(203, 2, 79));
 		margin-bottom: 0;
 		display: inline-block;
 	}	
-	#mc_embed_signup_scroll {
-		.make-row();	
+	.form-signup {
+		.make-xs-column(12;@gutter: 0px);
+		.make-md-column(12;@gutter: 30px);
 	}
-	.mc-field-group.form-group {
-		.make-sm-column(4);	
+}
+
+// Sign up
+
+.panel-signup_header {
+	.make-sm-column(12;@gutter: 0px;);
+	clear: both;
+	h2 {
+		.header-shaded(rgb(203, 2, 79));
+		margin-bottom: 0;
+		display: inline-block;
+	}
+}
+
+.panel-signup {
+	.form-group {
 		margin-top: 1em;
 		margin-bottom: 1em;	
 		input {
-			width: 100%;
+			width: 95%;
 			.font-size(1.6);
 			padding: 0.3em;
 		}
-	}
-	.form-group {
-		.make-sm-column(12);	
+		@media (min-width: @screen-sm-min) {
+			float: left;	
+		}
 		.btn {
 			text-align: center;
 			border: 0;
 		  	display: inline-block;
 		  	color: rgb(255, 255, 255);
-		  	padding: 5px 30px;
+		  	padding: 6px 30px 7px;
 		  	text-transform: uppercase;
 		  	background-color: rgb(203, 2, 79);
 		  	font-family: Oswald,sans-serif;
+		  	max-width: 130px;
 		}
 	}
 	.response {
@@ -303,7 +319,6 @@ i.lsf-icon {
 		margin-bottom: 1em;
 	}
 }
-
 
 // Events
 
@@ -475,6 +490,7 @@ i.lsf-icon {
 
 .panel-involved_header {
 	.make-sm-column(12;@gutter: 0px;);
+	clear: both;
 	h2 {
 		.header-shaded(black);
 		margin-bottom: 0;
@@ -483,6 +499,7 @@ i.lsf-icon {
 }
 
 .panel-sponsor_header {
+	clear: both;
 	h2 {
 		.header-shaded(@brandAction);
 		margin-bottom: 0;
@@ -492,6 +509,7 @@ i.lsf-icon {
 
 
 .panel-involved_text {	
+	clear: both;
 	@media (min-width: @screen-md-min) {	
 		.make-md-column(9);
 	}	
