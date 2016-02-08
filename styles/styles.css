@@ -45,7 +45,7 @@ a{color:#05bbe6}a:hover{text-decoration:none}@font-face{font-family:LigatureSymb
 
 @media (min-width:768px){.panel-involved_header{float:left;width:100%}}.panel-involved_header h2{background-color:#000;color:#fff;padding:10px;font-weight:300;margin-bottom:0;display:inline-block}.panel-sponsor_header h2{background-color:#00c3c3;color:#fff;padding:10px;font-weight:300;margin-bottom:0;display:inline-block}@media (min-width:992px){.panel-involved_text{position:relative;min-height:1px;padding-left:0px;padding-right:15px}}
 
-@media (min-width:992px) and (min-width:992px){.panel-involved_text{float:left;width:75%}}.panel-involved_text a{border-bottom:1px solid}.panel-involved_text a:hover{color:#424242}.sponsors{clear:both;position:relative;min-height:1px;padding-left:0px;padding-right:15px;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:space-between;justify-content:space-between;margin-bottom:2em}
+@media (min-width:992px) and (min-width:992px){.panel-involved_text{float:left;width:95%}}.panel-involved_text a{border-bottom:1px solid}.panel-involved_text a:hover{color:#424242}.sponsors{clear:both;position:relative;min-height:1px;padding-left:0px;padding-right:15px;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:space-between;justify-content:space-between;margin-bottom:2em}
 .sponsors li.clearleft{background-color: #fff; padding:20px 0px; text-align: center; width:100%; display:block; float:none}
 .sponsors li{margin-bottom:30px; float:left;margin-right:30px; text-align: center}
 @media (min-width:992px){.sponsors{width:100%}}
