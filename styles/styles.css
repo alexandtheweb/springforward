@@ -24,7 +24,7 @@ a{color:#05bbe6}a:hover{text-decoration:none}@font-face{font-family:LigatureSymb
 
 .panel-signupform .form-group .btn{text-align:center;border:0;display:inline-block;color:#fff;padding:5px 30px;text-transform:uppercase;background-color:#cb024f;font-family:Oswald,sans-serif; border-radius:5px; float:right}.panel-signupform .response{position:relative;min-height:1px;padding-left:15px;padding-right:15px;margin-bottom:1em}@media (min-width:768px){.panel-signupform .response{float:left;width:100%}}.events-list{clear:both;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;-webkit-justify-content:space-between;justify-content:space-between}@media (min-width:992px){.events-list{margin-bottom:30px}}.event-detail{position:relative;background-color:#fff;margin-bottom:20px; margin-top:20px;}
 
-@media (min-width:992px){.event-detail{width:32%}}.event-detail>a:first-child{display:block}.event-header{padding:15px 25px 25px;color:#000}.event-header:hover{background-color:#e79800;color:#000}.event-title{font-size:21px;font-size:2.1rem;line-height:40px;line-height:4rem;font-weight:300;text-transform:uppercase;margin:0;position:relative;z-index:2}
+@media (min-width:992px){.event-detail{width:32%}}.event-detail>a:first-child{display:block}.event-header{padding:15px 25px 25px;color:#000}.event-header:hover{background-color:#e79800;color:#000}.event-title{font-size:21px;font-size:2.1rem;line-height:1.2;margin-bottom:5px;font-weight:300;text-transform:uppercase;margin:0;position:relative;z-index:2}
 
 @media (min-width:768px){.event-title{font-size:21px;font-size:2.1rem}}
 
