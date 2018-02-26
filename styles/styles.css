@@ -56,6 +56,6 @@ a{color:#05bbe6}a:hover{text-decoration:none}@font-face{font-family:LigatureSymb
 } 
 
 
-@media (min-width:768px){.gold-sponsors,.silver-sponsors,.venue-sponsors{width:auto}}.gold-sponsors img,.silver-sponsors img,.venue-sponsors img{max-width:100%}.gold-sponsors ul,.silver-sponsors ul,.venue-sponsors ul, .bronze-sponsors ul{list-style:none;margin:0;padding:0;width: 100%;overflow: hidden;}/* .silver-sponsors li{margin:0} */.footer-main{font-size:12px;font-size:1.2rem;line-height:14px;line-height:1.4rem;font-weight:700;background:url(../img/bg-footer.png) no-repeat 70% bottom}
+@media (min-width:768px){.gold-sponsors,.silver-sponsors,.headline-sponsors,.supporter-sponsors{width:auto}}.gold-sponsors img,.silver-sponsors img,.headline-sponsors img,.supporter-sponsors img{max-width:100%}.gold-sponsors ul,.silver-sponsors ul,.headline-sponsors ul, .bronze-sponsors ul, .supporter-sponsors ul{list-style:none;margin:0;padding:0;width: 100%;overflow: hidden;}/* .silver-sponsors li{margin:0} */.footer-main{font-size:12px;font-size:1.2rem;line-height:14px;line-height:1.4rem;font-weight:700;background:url(../img/bg-footer.png) no-repeat 70% bottom}
 
 @media (min-width:768px){.footer-main{text-align:right;margin-top:-50px}}.footer-main .footer-main_inner{padding-top:50px;padding-bottom:10px}.footer-main a{color:#282828;text-decoration:underline}
